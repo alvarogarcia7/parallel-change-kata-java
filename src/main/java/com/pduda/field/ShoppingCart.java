@@ -22,6 +22,12 @@ public class ShoppingCart {
     }
 
     public boolean hasDiscount() {
+        boolean hasDiscount = false;
+        for (Integer price : prices) {
+            if (price >= 100) {
+                hasDiscount = true;
+            }
+        }
         return hasDiscount;
     }
 
