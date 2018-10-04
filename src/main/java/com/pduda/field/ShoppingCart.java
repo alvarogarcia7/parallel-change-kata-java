@@ -5,7 +5,6 @@ import java.util.List;
 
 public class ShoppingCart {
     private int price;
-    private int numberOfProducts = 0;
     private boolean hasDiscount = false;
 
     private List<Integer> prices = new LinkedList<>();
@@ -14,7 +13,6 @@ public class ShoppingCart {
         if (price >= 100) {
             hasDiscount = true;
         }
-        this.numberOfProducts++;
         this.price += price;
         this.prices.add(price);
     }
