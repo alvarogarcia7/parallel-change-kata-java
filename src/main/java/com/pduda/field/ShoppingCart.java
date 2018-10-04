@@ -11,8 +11,7 @@ public class ShoppingCart {
     }
 
     public int calculateTotalPrice() {
-        final int price2 = this.prices.stream().mapToInt(Integer::new).sum();
-        return price2;
+        return this.prices.stream().mapToInt(Integer::new).sum();
     }
 
     public boolean hasDiscount() {
