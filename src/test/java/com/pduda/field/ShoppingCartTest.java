@@ -65,4 +65,13 @@ public class ShoppingCartTest {
         Assert.assertFalse(shoppingCart.hasDiscount());
     }
 
+    @Test
+    public void multipleItems_doesNotHaveDiscountIfContainsNoProductsWorthAtLeast100() throws Exception {
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.add(99);
+        shoppingCart.add(99);
+
+        Assert.assertFalse(shoppingCart.hasDiscount());
+    }
+
 }
