@@ -16,6 +16,7 @@ public class ShoppingCart {
         }
         this.numberOfProducts++;
         this.price += price;
+        this.prices.add(price);
     }
 
     public int calculateTotalPrice() {
