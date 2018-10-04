@@ -15,12 +15,7 @@ public class ShoppingCart {
 
     public int calculateTotalPrice() {
         final int price2 = this.prices.stream().mapToInt(Integer::new).sum();
-        if (price2 == price) {
-            return price2;
-        } else {
-            System.out.println("[ALERT] Prices do not match");
-            return price;
-        }
+        return price2;
     }
 
     public boolean hasDiscount() {
