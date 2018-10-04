@@ -15,6 +15,15 @@ public class ShoppingCartTest {
     }
 
     @Test
+    public void multipleItems_numberOfProductsInTheCart() throws Exception {
+        ShoppingCart shoppingCart = new ShoppingCart();
+        shoppingCart.add(10);
+        shoppingCart.add(10);
+
+        Assert.assertEquals(2, shoppingCart.numberOfProducts());
+    }
+
+    @Test
     public void singleItem_totalPrice() throws Exception {
         ShoppingCart shoppingCart = new ShoppingCart();
         shoppingCart.add(10);
