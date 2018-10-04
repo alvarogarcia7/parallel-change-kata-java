@@ -22,13 +22,7 @@ public class ShoppingCart {
     }
 
     public boolean hasDiscount() {
-        boolean hasDiscount = false;
-        for (Integer price : prices) {
-            if (price >= 100) {
-                hasDiscount = true;
-            }
-        }
-        return hasDiscount;
+        return prices.stream().anyMatch(it -> it >= 100);
     }
 
     public int numberOfProducts() {
