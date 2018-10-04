@@ -4,12 +4,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class ShoppingCart {
-    private int price;
-
     private List<Integer> prices = new LinkedList<>();
 
     public void add(int price) {
-        this.price += price;
         this.prices.add(price);
     }
 
